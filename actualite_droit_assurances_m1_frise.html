@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>M1 — Frise de la DDA à la RIS</title>
+<style>
+:root{--encre:#1F2A37;--ardoise:#3B4A5C;--accent:#4A6A8A;--clair:#EEF2F6;--trame:#D5DCE4;--fond:#F7F9FB;--texte:#2B2B2B;--gris:#5A6573;--acquis:#2E7D5B;--attente:#A35A00}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--texte);background:var(--fond);line-height:1.55;font-size:16px}
+header{background:var(--encre);color:#fff;padding:18px 24px}
+header .k{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#A9BCD0;font-weight:700}
+header h1{margin:4px 0 0;font-size:24px}
+main{max-width:980px;margin:0 auto;padding:20px 16px 40px}
+.box{background:#fff;border:1px solid var(--trame);border-radius:8px;padding:14px 16px;margin:12px 0}
+.consigne{background:var(--clair);border-left:4px solid var(--accent);border-radius:0}
+.legende{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--gris);margin:8px 0 18px}
+.legende span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.legende .a::before{background:var(--acquis)}.legende .w::before{background:#fff;border:2px dashed var(--attente)}
+.frise{position:relative;margin:0;padding:0 0 0 34px;list-style:none}
+.frise::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:3px;background:var(--trame)}
+.ev{position:relative;margin:0 0 14px}
+.ev::before{content:"";position:absolute;left:-30px;top:14px;width:16px;height:16px;border-radius:50%;background:var(--acquis);border:3px solid #fff;box-shadow:0 0 0 1px var(--trame)}
+.ev.attente::before{background:#fff;border:2px dashed var(--attente);box-shadow:none}
+.ev button{width:100%;text-align:left;background:#fff;border:1px solid var(--trame);border-radius:8px;padding:12px 14px;font:inherit;color:inherit;cursor:pointer;display:flex;gap:14px;align-items:baseline}
+.ev button:hover,.ev button[aria-expanded="true"]{border-color:var(--accent);background:var(--clair)}
+.date{font-weight:700;color:var(--encre);min-width:170px}
+.titre{flex:1}
+.etat{font-size:12px;font-weight:700;padding:2px 8px;border-radius:10px;background:#DFF1E7;color:#1D5A40;white-space:nowrap}
+.attente .etat{background:#F6E7D2;color:#7A4300}
+.portee{display:none;background:#fff;border:1px solid var(--accent);border-top:0;border-radius:0 0 8px 8px;padding:10px 14px;margin-top:-6px;font-size:15px}
+.ev.ouvert .portee{display:block}
+.jalon-attendu{font-style:italic}
+.compteur{font-size:14px;color:var(--gris);margin-top:8px}
+footer{text-align:center;font-size:12px;color:var(--gris);padding:16px}
+@media(max-width:640px){.ev button{flex-direction:column;gap:4px}.date{min-width:0}}
+</style>
+<script>
+  window.ACTUALITE = {
+    url: 'https://ibkvyjlglwufxvzxnysa.supabase.co',
+    key: 'sb_publishable_xUfZHSOHf4TnBRRyzU_qJA_TcXIMSKX',
+    da:  'actualite-droit-assurances'
+  };
+</script>
+<script src="https://thle2.github.io/formation_parametres_actualite/actualite.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="k">Actualité du droit des assurances · Module 1</div>
+  <h1>De la DDA à la RIS : la frise</h1>
+</header>
+<main>
+<div class="box consigne">Cliquez sur chaque étape pour découvrir sa portée. Ouvrez les huit étapes : l'exercice qui suit vous demandera de les dater et de les relier à leur portée.</div>
+<div class="legende"><span class="a">Étape acquise</span><span class="w">Étape attendue</span></div>
+
+<ol class="frise" id="frise">
+  <li class="ev"><button aria-expanded="false"><span class="date">20 janvier 2016</span><span class="titre">Adoption de la DDA (directive 2016/97)</span><span class="etat">Acquis</span></button>
+    <div class="portee">Le texte européen fixe des règles communes à tous les distributeurs d'assurance : conseil, information, gouvernance produit, conflits d'intérêts, formation.</div></li>
+  <li class="ev"><button aria-expanded="false"><span class="date">16 mai 2018</span><span class="titre">Ordonnance n° 2018-361</span><span class="etat">Acquis</span></button>
+    <div class="portee">La DDA est transposée en droit français, principalement dans le code des assurances.</div></li>
+  <li class="ev"><button aria-expanded="false"><span class="date">1<sup>er</sup> octobre 2018</span><span class="titre">Entrée en application de la DDA</span><span class="etat">Acquis</span></button>
+    <div class="portee">Les nouvelles règles s'imposent à tous les distributeurs : recueil des exigences et besoins, IPID, 15 heures de formation par an.</div></li>
+  <li class="ev"><button aria-expanded="false"><span class="date">18 décembre 2025</span><span class="titre">Accord politique sur la RIS</span><span class="etat">Acquis</span></button>
+    <div class="portee">Le Parlement européen et le Conseil s'accordent sur la réforme : value for money, test renforcé des rétrocessions sans interdiction générale.</div></li>
+  <li class="ev"><button aria-expanded="false"><span class="date">23 juin 2026</span><span class="titre">Approbation par la commission ECON</span><span class="etat">Acquis</span></button>
+    <div class="portee">La commission des affaires économiques et monétaires du Parlement européen approuve le compromis. Le texte n'est pas encore adopté.</div></li>
+  <li class="ev attente"><button aria-expanded="false"><span class="date"><span data-actualite="ris-vote-pleniere" data-format="jalon">11/11/2026 (date indicative)</span></span><span class="titre">Vote en séance plénière du Parlement européen</span><span class="etat" id="etat-vote">Attendu</span></button>
+    <div class="portee">Le Parlement européen se prononce sur le texte. Viennent ensuite l'adoption par le Conseil et la publication au Journal officiel de l'Union européenne.</div></li>
+  <li class="ev attente"><button aria-expanded="false"><span class="date">Publication + 24 mois</span><span class="titre">Fin du délai de transposition</span><span class="etat">Attendu</span></button>
+    <div class="portee">Les États membres, dont la France, doivent avoir intégré les nouvelles règles dans leur droit national.</div></li>
+  <li class="ev attente"><button aria-expanded="false"><span class="date">Publication + 30 mois</span><span class="titre">Application des nouvelles règles</span><span class="etat">Attendu</span></button>
+    <div class="portee">Les distributeurs appliquent les règles issues de la RIS. Jusque-là, ce sont les règles actuelles de la DDA qui s'appliquent.</div></li>
+</ol>
+<p class="compteur" id="compteur">Étapes ouvertes : 0 / 8</p>
+</main>
+<footer>Actualité du droit des assurances · Module 1</footer>
+<script>
+(function(){
+  var vus = new Set(), evs = document.querySelectorAll('.ev'), cpt = document.getElementById('compteur');
+  evs.forEach(function(ev, i){
+    var b = ev.querySelector('button');
+    b.addEventListener('click', function(){
+      var ouvert = ev.classList.toggle('ouvert');
+      b.setAttribute('aria-expanded', ouvert ? 'true' : 'false');
+      vus.add(i);
+      cpt.textContent = 'Étapes ouvertes : ' + vus.size + ' / ' + evs.length + (vus.size === evs.length ? ' — vous pouvez passer à l’exercice.' : '');
+    });
+  });
+  /* Le statut du vote vient de la base : quand le jalon passe à « intervenu », l'étape devient acquise. */
+  var jalon = document.querySelector('[data-actualite="ris-vote-pleniere"]');
+  if (jalon && window.MutationObserver) {
+    new MutationObserver(function(){
+      if (jalon.classList.contains('jalon-intervenu')) {
+        var ev = jalon.closest('.ev'); ev.classList.remove('attente');
+        document.getElementById('etat-vote').textContent = 'Acquis';
+      }
+    }).observe(jalon, { attributes: true, attributeFilter: ['class'] });
+  }
+})();
+</script>
+</body>
+</html>
